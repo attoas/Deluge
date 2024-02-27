@@ -1,0 +1,11 @@
+get_BillChild_details = zoho.crm.getRecordById("BillsParent",61905000000435447);
+//info get_BillChild_details;
+//info get_BillChild_details.get("Owner");
+info get_BillChild_details;
+//info get_BillChild_details.get("Owner.id");
+//# Access the Owner sub-object as a dictionary
+owner_details = get_BillChild_details.get("Owner");
+info owner_details;
+//# Extract the id using dictionary key access
+owner_id = owner_details.get("id");
+info owner_id;
